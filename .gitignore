@@ -1,2 +1,4 @@
-*.jpg
-*.png
+.jpg
+.png
+.mp4
+ffmpeg.txt
