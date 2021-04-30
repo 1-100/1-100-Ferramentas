@@ -7,29 +7,29 @@ PFont font;
 PImage[] formas_imagens =  new PImage[1000];
 
 String[] formas = {
-  "011",
-  "012",
-  "013",
-  "014",
-  "015",
-  "016",
-  "017",
-  "018",
-  "019",
-  "020"
+  "021",
+  "022",
+  "023",
+  "024",
+  "025",
+  "026",
+  "027",
+  "028",
+  "029",
+  "030"
 };
 
 String[] formas_autorias = {
-  "André Burnier",
-  "André Burnier",
+  "Advan Shumiski",
+  "Mandu",
   "John Cartan",
-  "Fátima Finizola",
-  "Júnior Morimoto",
-  "César Ganimi Machado",
-  "Monica Rizzolli",
-  "Henrique Eira",
-  "Henrique Eira",
-  "Luiz Jales"
+  "Advan Shumiski",
+  "Rodrigo Junqueira",
+  "John Cartan",
+  "Caluã Pataca e Preface",
+  "Marlon Amorim Tenório",
+  "Tiago Fernandes Tavares",
+  "Felipe Turcheti"
 };
 
 color[] paleta = {
@@ -69,7 +69,7 @@ void setup() {
   textFont(font);
 
   if (gravando) {
-    videoExport = new VideoExport(this, "1-100-Compilado-011-020.mp4");
+    videoExport = new VideoExport(this, "1-100-Compilado-021-030.mp4");
     videoExport.setQuality(90, 0);
     videoExport.setFrameRate(frameR);
     videoExport.startMovie();
@@ -90,19 +90,17 @@ void setup() {
     }
   }
 
-
-
   blendMode(MULTIPLY);
   fill(0);
 }
 
 void draw() {
-  background(cor_fundo);
+  background(#BDB76B);
 
   if ( frameCount <= tempo_intro) {
     textAlign(CENTER);
     text("100 FORMAS DE CONTAR DE 1 A 100", width/2, height/2 - 100);
-    text("Compilado 011 - 020", width/2, height/2 + 80);
+    text("Compilado 021 - 030", width/2, height/2 + 80);
 
     if (frameCount == tempo_intro) {
       cor_fundo_troca();
