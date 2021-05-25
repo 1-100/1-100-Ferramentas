@@ -1,6 +1,7 @@
-.jpg
-.png
-.mp4
-.webm
-.gif
+*.jpg
+*.png
+*.mp4
+*.webm
+*.gif
+*.DS_Store
 ffmpeg.txt
