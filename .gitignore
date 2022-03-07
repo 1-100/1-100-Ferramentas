@@ -5,3 +5,5 @@
 *.gif
 *.DS_Store
 ffmpeg.txt
+*.md
+*.jpg
