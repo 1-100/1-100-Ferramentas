@@ -3,5 +3,6 @@
 *.jpg
 *.mp4
 *.png
+*.md
 *.webm
 ffmpeg.txt

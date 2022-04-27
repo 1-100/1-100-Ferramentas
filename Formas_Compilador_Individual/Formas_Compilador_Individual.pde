@@ -1,9 +1,11 @@
 import com.hamoid.*;
 VideoExport videoExport;
+
+String nome = "1-100-Contribuicao-54";
+int frameR = 25;
+
 boolean gravando = true;
-
 PFont font;
-
 PImage[] forma_imagens =  new PImage[100];
 
 color[] paleta = {
@@ -29,9 +31,7 @@ color[] paleta = {
 };
 
 color cor_fundo;
-
 int forma_contador = 0;
-int frameR = 2;
 
 void setup() {
   size(1000, 1000);
@@ -41,7 +41,7 @@ void setup() {
   textFont(font);
 
   if (gravando) {
-    videoExport = new VideoExport(this, "1-100-Contribuicao-41.mp4");
+    videoExport = new VideoExport(this, nome + ".mp4");
     videoExport.setQuality(90, 0);
     videoExport.setFrameRate(frameR);
     videoExport.startMovie();

@@ -7,30 +7,34 @@ PFont font;
 PImage[] formas_imagens =  new PImage[1000];
 
 String[] formas = {
-  "031",
-  "032",
-  "033",
-  "034",
-  "035",
-  "036",
-  "037",
-  "038",
-  "039",
-  "040"
+  "041",
+  "042",
+  "043",
+  "044",
+  "045",
+  "046",
+  "047",
+  "048",
+  "049",
+  "050"
 };
 
 String[] formas_autorias = {
-  "Mariana Leal",
-  "Alexandre B A Villares",
   "Guilherme Vieira",
-  "Felipe Turcheti",
-  "Felipe Turcheti",
-  "Vinícius Ladivez",
-  "Vinícius Ladivez",
-  "Mateus Berruezo",
-  "Vamoss",
+  "Thiago Correia",
+  "Marlon Tenório",
+  "Guilherme Vieira",
+  "Guilherme Vieira",
+  "Guilherme Vieira",
+  "Guilherme Vieira",
+  "Guilherme Vieira",
+  "Jéssica Breda",
   "Guilherme Vieira"
 };
+
+String titulo = "Compilado 041 — 050";
+
+String arquivo = "1-100-Compilado-041-050.mp4";
 
 color[] paleta = {
   #7FFFD4,
@@ -69,7 +73,7 @@ void setup() {
   textFont(font);
 
   if (gravando) {
-    videoExport = new VideoExport(this, "1-100-Compilado-031-040.mp4");
+    videoExport = new VideoExport(this, arquivo);
     videoExport.setQuality(90, 0);
     videoExport.setFrameRate(frameR);
     videoExport.startMovie();
@@ -100,7 +104,7 @@ void draw() {
   if ( frameCount <= tempo_intro) {
     textAlign(CENTER);
     text("100 FORMAS DE CONTAR DE 1 A 100", width/2, height/2 - 100);
-    text("Compilado 041 - 040", width/2, height/2 + 80);
+    text(titulo, width/2, height/2 + 80);
 
     if (frameCount == tempo_intro) {
       cor_fundo_troca();
