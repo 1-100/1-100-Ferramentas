@@ -1,10 +1,16 @@
 import com.hamoid.*;
 VideoExport videoExport;
 
-String nome = "1-100-Contribuicao-54";
-int frameR = 25;
-
+String nome_forma = "025";
+String nome_pessoa = "Rodrigo Junqueira";
+int paleta_selecionada = 7;
+boolean paleta_aleatoria = false;
 boolean gravando = true;
+int frameR = 10;
+
+String nome = "1-100-Contribuicao-" + nome_forma + "-" + nome_pessoa;
+String caminho_imagens = "D:/Github/1-100-Site/content/formas/" + nome_forma;
+
 PFont font;
 PImage[] forma_imagens =  new PImage[100];
 
@@ -48,12 +54,14 @@ void setup() {
   }
   frameRate(frameR);
 
+  if( paleta_aleatoria ) {
   cor_fundo_troca();
+  }
   int forma_imagens_indice = 0;
 
   for (int i = 0; i < 100; i++) {
     String numero = str(i + 1);
-    String caminho = "/" + numero + ".jpg";
+    String caminho = caminho_imagens + "/" + numero + ".jpg";
     forma_imagens[forma_imagens_indice] = loadImage(caminho);
     println("Carregando " + caminho);
     forma_imagens_indice++;
@@ -64,12 +72,16 @@ void setup() {
 }
 
 void draw() {
-  background(cor_fundo);
-
-
+  
+  if( paleta_aleatoria ) {
+    background(cor_fundo);
+  } else {
+    background(paleta[paleta_selecionada]);
+  }
+  
   noFill();
   rect(width/2, height/2, 500, 500);
-  image(forma_imagens[forma_contador], width/2, height/2);
+  image(forma_imagens[forma_contador], width/2, height/2, 500, 500);
   forma_contador++;
 
   if (gravando) {
