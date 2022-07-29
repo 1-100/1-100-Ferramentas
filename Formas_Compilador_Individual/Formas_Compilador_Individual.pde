@@ -1,9 +1,36 @@
 import com.hamoid.*;
 VideoExport videoExport;
 
-String nome_forma = "025";
-String nome_pessoa = "Rodrigo Junqueira";
-int paleta_selecionada = 7;
+//String nome_forma = "014";
+//String nome_pessoa = "FátimaFinizola";
+
+//String nome_forma = "017";
+//String nome_pessoa = "MonicaRizzolli";
+
+//String nome_forma = "025";
+//String nome_pessoa = "RodrigoJunqueira";
+
+//String nome_forma = "028";
+//String nome_pessoa = "MarlonTenório";
+
+//String nome_forma = "029";
+//String nome_pessoa = "TiagoTavares";
+
+//String nome_forma = "038";
+//String nome_pessoa = "MateusBerruezo";
+
+//String nome_forma = "042";
+//String nome_pessoa = "TiagoCorreia";
+
+String nome_forma = "053";
+String nome_pessoa = "GuilhermeVieira";
+
+
+
+
+
+
+int paleta_selecionada = 0;
 boolean paleta_aleatoria = false;
 boolean gravando = true;
 int frameR = 10;
@@ -15,6 +42,7 @@ PFont font;
 PImage[] forma_imagens =  new PImage[100];
 
 color[] paleta = {
+  #FFFFFF,
   #7FFFD4, 
   #FF7F50, 
   #D2691E, 
@@ -40,7 +68,7 @@ color cor_fundo;
 int forma_contador = 0;
 
 void setup() {
-  size(1000, 1000);
+  size(800, 800);
   imageMode(CENTER);
   rectMode(CENTER);
   font = createFont("NectoMono-Regular.otf", 40);
