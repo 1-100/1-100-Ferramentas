@@ -5,36 +5,37 @@ boolean gravando = true;
 PFont font;
 
 PImage[] formas_imagens =  new PImage[1000];
+String caminho_imagens = "D:/Github/1-100-Site/content/formas/";
 
 String[] formas = {
-  "041",
-  "042",
-  "043",
-  "044",
-  "045",
-  "046",
-  "047",
-  "048",
-  "049",
-  "050"
+  "061",
+  "062",
+  "063",
+  "064",
+  "065",
+  "066",
+  "067",
+  "068",
+  "069",
+  "070"
 };
 
 String[] formas_autorias = {
-  "Guilherme Vieira",
-  "Thiago Correia",
-  "Marlon Tenório",
+  "Lucas Gabriel Lima",
   "Guilherme Vieira",
   "Guilherme Vieira",
   "Guilherme Vieira",
   "Guilherme Vieira",
   "Guilherme Vieira",
-  "Jéssica Breda",
+  "Guilherme Vieira",
+  "Gabriela Momberg e Guilherme Vieira",
+  "Guilherme Vieira",
   "Guilherme Vieira"
 };
 
-String titulo = "Compilado 041 — 050";
+String titulo = "Compilado " + formas[0] + " — " + formas[9];
 
-String arquivo = "1-100-Compilado-041-050.mp4";
+String arquivo = "1-100-Compilado-" + formas[0] + "-" + formas[9] + ".mp4";
 
 color[] paleta = {
   #7FFFD4,
@@ -87,7 +88,7 @@ void setup() {
   for (int j = 0; j < 10; j++) {
     for (int i = 0; i < 100; i++) {
       String numero = str(i + 1);
-      String caminho = formas[j] + "/" + numero + ".jpg";
+      String caminho = caminho_imagens + formas[j] + "/" + numero + ".jpg";
       formas_imagens[forma_imagens_indice] = loadImage(caminho);
       println("Carregando " + caminho);
       forma_imagens_indice++;
