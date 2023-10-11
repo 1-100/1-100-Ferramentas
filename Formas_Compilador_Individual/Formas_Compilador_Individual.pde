@@ -22,12 +22,15 @@ VideoExport videoExport;
 //String nome_forma = "042";
 //String nome_pessoa = "TiagoCorreia";
 
-String nome_forma = "063";
-String nome_pessoa = "GabrielaMombergGuilhermeVieira";
+//String nome_forma = "063";
+//String nome_pessoa = "GabrielaMombergGuilhermeVieira";
+
+String nome_forma = "076";
+String nome_pessoa = "Guilherme Vieira";
 
 int paleta_selecionada = 0;
 boolean paleta_aleatoria = true;
-boolean gravando = false;
+boolean gravando = true;
 int frameR = 10;
 
 String nome = "1-100-Contribuicao-" + nome_forma + "-" + nome_pessoa;
